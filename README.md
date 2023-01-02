@@ -43,4 +43,4 @@ To run this project, run the following command
 
 ## Screenshots
 
-<img src="https://user-images.githubusercontent.com/114740896/210266052-8709e681-93e3-4bd0-ade5-b56155f27b65.png" alt="screenshot" height="250" width="400">
+<img src="https://user-images.githubusercontent.com/114740896/210266052-8709e681-93e3-4bd0-ade5-b56155f27b65.png" alt="screenshot" height="210" width="400">
