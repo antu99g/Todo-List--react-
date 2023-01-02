@@ -22,19 +22,19 @@ To run this project, run the following command
 
 #### API prefix
 
-```
+```bash
     https://jsonplaceholder.typicode.com/todos
 ```
 
 #### Get tasks by user-id
 
-```
+```bash
   https://jsonplaceholder.typicode.com/todos?userId=${user-id}
 ```
 
 #### Get tasks by task-id
 
-```
+```bash
   https://jsonplaceholder.typicode.com/todos/${id}
 ```
 ## Documentation
