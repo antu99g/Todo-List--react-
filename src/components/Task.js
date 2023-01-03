@@ -12,13 +12,13 @@ function Task ({task}) {
    // State for hiding edit-button when a task is done
    const [editingTitle, setEditingTitle] = useState(false);
 
+   // Input field to edit a task
    const editInputRef = useRef(null);
 
 
    // Function for checkbox click
    const handleCheckboxClick = (e) => {
       setTaskDone(e.target.checked);
-      // task.completed = !(task.completed);
       const body = { completed: !(task.completed) };
       editTask(task.id, body);
    };
@@ -28,27 +28,15 @@ function Task ({task}) {
    const handleDeleteTask = (id) => {
       setHidden(true);
       deleteTask(id);
-      // fetch(`https://jsonplaceholder.typicode.com/tasks/${id}`, {
-      //    method: "DELETE",
-      // });
    }
 
 
    // Function for editing a task
    const handleEditTask = (id) => {
-      setTaskTitle(editInputRef.value);
+      setTaskTitle(editInputRef.current.value);
       setEditingTitle(false);
       const body = {title: taskTitle};
       editTask(id, body);
-      // fetch(`https://jsonplaceholder.typicode.com/tasks/${id}`, {
-      //    method: "PUT",
-      //    body: JSON.stringify({
-      //       title: taskTitle
-      //    }),
-      //    headers: {
-      //       "Content-type": "application/json; charset=UTF-8",
-      //    },
-      // });
    }
 
 

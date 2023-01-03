@@ -3,13 +3,6 @@ export async function fetchTasks () {
    const response = await fetch("https://jsonplaceholder.typicode.com/todos?userId=1");
    const json = await response.json();
    return json;
-   // fetch("https://jsonplaceholder.typicode.com/todos?userId=1")
-   //    .then((res) => res.json())
-   //    .then((json) => {
-   //       // setTasks(json);
-   //       console.log("json from api", json);
-   //       return json;
-   //    });
 }
 
 
@@ -43,6 +36,5 @@ export function editTask(id, title) {
       headers: {
          "Content-type": "application/json; charset=UTF-8",
       },
-   })
-   // .then(res => console.log(res))
+   });
 }
