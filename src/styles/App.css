@@ -61,6 +61,7 @@ body{
 
 /* List of all tasks */
 .tasks-container{
+   min-width: 35vw;
    max-height: 65vh;
    overflow-y: auto;
    overflow-x: visible;

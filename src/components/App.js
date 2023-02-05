@@ -3,7 +3,7 @@ import '../styles/App.css';
 import Task from "./Task";
 import { fetchTasks, newTask } from "../api";
 
-function App() {
+function App () {
   const [tasks, setTasks] = useState([]);
   const [newTaskData, setNewTaskData] = useState("");
 
@@ -44,8 +44,8 @@ function App() {
          </form>
 
          <div className="tasks-container">
-            {tasks.map((task) => {
-               return <Task key={`${task.id}-${task.title}`} task={task} />;
+            {tasks.map((task, index) => {
+               return <Task task={task} key={index} />;
             })}
          </div>
       </div>

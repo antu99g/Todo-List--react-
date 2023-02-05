@@ -6,7 +6,7 @@ function Task ({task}) {
    // State for checkbox status
    const [taskDone, setTaskDone] = useState(false);
    // State for hiding a task (after deleting)
-   const [hidden, setHidden] = useState(false);
+   const [hideTask, setHideTask] = useState(false);
    // State for editing a task
    const [taskTitle, setTaskTitle] = useState(task.title);
    // State for hiding edit-button when a task is done
@@ -26,7 +26,7 @@ function Task ({task}) {
 
    // Function for deleting a task
    const handleDeleteTask = (id) => {
-      setHidden(true);
+      setHideTask(true);
       deleteTask(id);
    }
 
@@ -41,7 +41,7 @@ function Task ({task}) {
 
 
    return (
-      <div className={`task ${taskDone && "taskdone"} ${hidden && "hidden"}`}>
+      <div className={`task ${taskDone && "taskdone"} ${hideTask && "hidden"}`}>
          <input type="checkbox" onClick={handleCheckboxClick} />
 
          <span>
@@ -56,9 +56,7 @@ function Task ({task}) {
                   }
                   alt="edit"
                   className={editingTitle ? "editCross" : "editBtn"}
-                  onClick={() => {
-                     setEditingTitle(!editingTitle);
-                  }}
+                  onClick={() => setEditingTitle(!editingTitle)}
                />
             )}
 
