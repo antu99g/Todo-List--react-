@@ -33,8 +33,11 @@ function Task ({task}) {
 
    // Function for editing a task
    const handleEditTask = (id) => {
+      if(editInputRef.current.value === ''){
+         setEditingTitle(false);
+         return;
+      }
       setTaskTitle(editInputRef.current.value);
-      setEditingTitle(false);
       const body = {title: taskTitle};
       editTask(id, body);
    }
