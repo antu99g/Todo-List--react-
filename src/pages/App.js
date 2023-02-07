@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/App.css';
-import Task from "./Task";
+import Task from "../components/Task";
 import { fetchTasks, newTask } from "../api";
 
 function App () {
