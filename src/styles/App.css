@@ -73,6 +73,8 @@ body{
    grid-column: 2/4;
    justify-self: start;
    margin-left: 2vw;
+   /* display: flex;
+   flex-direction: column-reverse; */
 }
 .tasks-container::-webkit-scrollbar {
    width: 4px;
@@ -86,7 +88,7 @@ body{
 }
 
 /* Each Task */
-.tasks-container div:nth-child(1){
+.tasks-container div:first-child{
    padding-top: 2px;
 }
 .tasks-container div:last-child {

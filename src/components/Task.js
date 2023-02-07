@@ -38,6 +38,7 @@ function Task ({task}) {
          return;
       }
       setTaskTitle(editInputRef.current.value);
+      setEditingTitle(false);
       const body = {title: taskTitle};
       editTask(id, body);
    }
@@ -50,7 +51,7 @@ function Task ({task}) {
          <span>
             <h4>Task</h4>
 
-            {!taskDone && (
+            {!taskDone && (   // if taskDone is false 
                <img
                   src={
                      editingTitle

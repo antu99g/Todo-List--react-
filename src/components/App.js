@@ -4,13 +4,13 @@ import Task from "./Task";
 import { fetchTasks, newTask } from "../api";
 
 function App () {
-  const [tasks, setTasks] = useState([]);
-  const [newTaskData, setNewTaskData] = useState("");
+   const [tasks, setTasks] = useState([]);
+   const [newTaskData, setNewTaskData] = useState("");
 
-	useEffect(() => {
-		(async () => {
-         const json = await fetchTasks();
-         setTasks(json);
+   useEffect(() => {
+      (async () => {
+         const response = await fetchTasks();
+         setTasks(response);
       })();
    }, []);
 
@@ -20,24 +20,22 @@ function App () {
       e.preventDefault();
       e.target.reset();
       const formData = { title: newTaskData, completed: false };
-      const json = await newTask(formData);
-      setTasks([json, ...tasks]);
+      const response = await newTask(formData);
+      setTasks([...tasks, response]);
    };
 
 
-	return (
+   return (
       <div className="App">
          <h1>Todo List</h1>
 
-         <form onSubmit={handleNewTask} className='taskAddForm'>
+         <form onSubmit={handleNewTask} className="taskAddForm">
             <h3>Description</h3>
             <input
                type="text"
                name="title"
-               onChange={({ target }) => {
-                  setNewTaskData(target.value);
-               }}
-               placeholder='Type here..'
+               onChange={(e) => setNewTaskData(e.target.value)}
+               placeholder="Type here.."
                required
             />
             <button type="submit">Add Task</button>
