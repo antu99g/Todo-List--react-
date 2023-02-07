@@ -73,8 +73,6 @@ body{
    grid-column: 2/4;
    justify-self: start;
    margin-left: 2vw;
-   /* display: flex;
-   flex-direction: column-reverse; */
 }
 .tasks-container::-webkit-scrollbar {
    width: 4px;
