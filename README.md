@@ -41,6 +41,10 @@ To run this project, run the following command
 
 [JSONPlaceholder](https://jsonplaceholder.typicode.com/guide/)
 
+## Hosted Link
+
+Visit site: [Todo List](https://todo-list-234410.netlify.app)
+
 ## Screenshots
 
 <img src="https://user-images.githubusercontent.com/114740896/210266052-8709e681-93e3-4bd0-ade5-b56155f27b65.png" alt="screenshot" height="210" width="400">
